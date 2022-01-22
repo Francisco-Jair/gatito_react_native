@@ -29,7 +29,7 @@ export default function Servico() {
     <SafeAreaView>
       <StatusBar />
       {/* A status bar e para o android */}
-      <Text>Serviços!</Text>
+      {/* <Text>Serviços!</Text> */}
       <FlatList
         data={servico}
         renderItem={({ item }) => <Item {...item} />}
