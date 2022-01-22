@@ -1,5 +1,6 @@
 import React from "react";
-import { Text, SafeAreaView, StatusBar } from "react-native";
+import { Text, SafeAreaView, StatusBar, FlatList } from "react-native";
+import Item from "./item";
 
 export default function Servico() {
   const servico = [
@@ -29,6 +30,11 @@ export default function Servico() {
       <StatusBar />
       {/* A status bar e para o android */}
       <Text>Serviços!</Text>
+      <FlatList
+        data={servico}
+        renderItem={({ item }) => <Item {...item} />}
+        keyExtractor={(id) => String(id)}
+      />
     </SafeAreaView>
   );
 }
