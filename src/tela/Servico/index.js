@@ -1,7 +1,6 @@
 import React from "react";
 import { FlatList } from "react-native";
 import Item from "./item";
-import TelaPadrao from "../../comonentes/TelaPadrao";
 
 export default function Servico() {
   const servico = [
@@ -27,12 +26,12 @@ export default function Servico() {
   ];
 
   return (
-    <TelaPadrao>
+    <>
       <FlatList
         data={servico}
         renderItem={({ item }) => <Item {...item} />}
         keyExtractor={({ id }) => String(id)}
       />
-    </TelaPadrao>
+    </>
   );
 }
